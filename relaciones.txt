@@ -1,0 +1,25 @@
+Language -> fil (1:N)
+Film ->film_actor (1:N)
+Actor -> film_actor (1:N)
+Category -> film_category (1:N)
+film -> film_category (1:N)
+
+film->inventory (1:N)
+store -> inventory (1:N)
+inventory -> rental (1:N)
+customer -> Rental (1:N)
+staff -> rental (1:N)
+
+rental -> payment (1:N)
+customer -> payment (1:N)
+staff -> payment (1:N)
+
+country -> city (1:N)
+city -> adress (1:N)
+adress -> customer (1:N)
+adress -> store (1:N)
+adress -> staff (1:N)
+
+store -> staff (1:N)
+staff -> store (Manager) (1:1)
+store -> customer (1:N)
